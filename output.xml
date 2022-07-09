@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220709 11:41:40.936" rpa="false" schemaversion="3">
+<suite id="s1" name="Amz Teste" source="C:\Users\Rafael\Desktop\AulaRob\robootfram\Web-Robot\amz_teste.robot">
+<test id="s1-t1" name="Caso de Teste 01 - acesso ao menu &quot;Livros&quot;" line="10">
+<kw name="Abrir o navegador" library="am_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220709 11:41:41.429" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220709 11:41:41.429" endtime="20220709 11:41:43.936"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220709 11:41:43.936" endtime="20220709 11:41:44.158"/>
+</kw>
+<status status="PASS" starttime="20220709 11:41:41.428" endtime="20220709 11:41:44.159"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" library="am_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220709 11:41:44.164" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<status status="PASS" starttime="20220709 11:41:44.163" endtime="20220709 11:41:48.823"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${Livros}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220709 11:41:48.823" endtime="20220709 11:41:49.014"/>
+</kw>
+<status status="PASS" starttime="20220709 11:41:44.162" endtime="20220709 11:41:49.014"/>
+</kw>
+<kw name="Entrar no menu &quot;Livros&quot;" library="am_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Livros}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220709 11:41:49.017" level="INFO">Clicking element '//a[@href='/Livros/b/?ie=UTF8&amp;node=6740748011&amp;ref_=nav_cs_books'][contains(.,'Livros')]'.</msg>
+<status status="PASS" starttime="20220709 11:41:49.017" endtime="20220709 11:41:53.730"/>
+</kw>
+<status status="PASS" starttime="20220709 11:41:49.016" endtime="20220709 11:41:53.731"/>
+</kw>
+<kw name="Verificar se aparece a frase &quot;Loja de Livros&quot;" library="am_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>text=${TEXTODE_Livros}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220709 11:41:53.733" endtime="20220709 11:41:53.815"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${HEADER_Livros}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220709 11:41:53.815" endtime="20220709 11:41:53.979"/>
+</kw>
+<status status="PASS" starttime="20220709 11:41:53.732" endtime="20220709 11:41:53.979"/>
+</kw>
+<doc>Esse teste verifica o menu Livros do site da Amazon.com.br
+E verifica a categoria Loja de Livros</doc>
+<tag>menus categorias</tag>
+<status status="PASS" starttime="20220709 11:41:41.424" endtime="20220709 11:41:53.980"/>
+</test>
+<doc>Essa suíte testa o site da Amazon.com.br</doc>
+<status status="PASS" starttime="20220709 11:41:40.939" endtime="20220709 11:41:53.983"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">menus categorias</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amz Teste">Amz Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
